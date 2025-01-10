@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Movie Hunt</h1>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for a movie...">
+      <button id="search-btn">Search</button>
+    </div>
+  </header>
+
+  <!-- Image Banner -->
+  <div class="banner">
+    <img src="https://pickamovieforme.b-cdn.net/wp-content/uploads/2020/09/prev_comp.jpg">
+  </div>
+
+  <section id="movies" class="movies-container">
+    <!-- Movie results will be displayed here -->
+  </section>
+
+  <div id="pagination" class="pagination-container">
+    <button id="prev-btn" class="pagination-btn" disabled>Previous</button>
+    <button id="next-btn" class="pagination-btn">Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
