@@ -159,3 +159,247 @@ header .logo h1 {
   max-width: 100%; /* Ensure the image is responsive */
   height: auto; /* Maintain aspect ratio */
 }
+
+@keyframes logoAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.logo-img {
+  animation: logoAnimation 2s infinite;
+}
+
+
+#search-bar {
+  transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.banner img {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.movies-container {
+  animation: slideUp 1s ease-in-out;
+}
+
+.pagination-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination-btn:hover {
+  background-color: #007BFF;
+  color: white;
+  transform: scale(1.1);
+}
+
+@keyframes pageLoad {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: pageLoad 1s ease-in-out;
+}
+
+#search-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#search-btn:active {
+  transform: scale(1.2); /* Scale up by 20% */
+  background-color: #007BFF; /* Optional: Change background color */
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of movie cards */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+  padding: 20px;
+}
+
+.movie-card {
+  flex: 1 1 calc(25% - 40px); /* 4 cards per row on desktop */
+  max-width: calc(25% - 40px); /* Ensure cards don't exceed width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Add hover effect */
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .movie-card {
+    flex: 1 1 calc(50% - 40px); /* 2 cards per row */
+    max-width: calc(50% - 40px);
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .movie-card {
+    flex: 1 1 100%; /* 1 card per row */
+    max-width: 100%;
+  }
+}
+
+#search-bar {
+  width: 70%; /* Default width */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e01f1f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  #search-bar {
+    width: 60%; /* Reduce width */
+  }
+
+  #search-btn {
+    padding: 10px 15px; /* Smaller padding */
+  }
+}
+
+@media (max-width: 480px) {
+  #search-bar {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 10px; /* Add space between search bar and button */
+  }
+
+  #search-btn {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e01f1f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 5px; /* Space between buttons */
+}
+
+.pagination-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 480px) {
+  .pagination-btn {
+    padding: 8px 15px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color:  #121212;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust for larger screens */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row
+  }
+}
+
+/* Base styles for search bar and button */
+#search-bar {
+  width: 100%; /* Default full width */
+  transition: width 0.3s ease; /* Smooth transition for width changes */
+}
+
+#search-btn {
+  padding: 10px 20px; /* Default padding */
+  transition: padding 0.3s ease; /* Smooth transition for padding changes */
+}
+
+/* Responsive adjustments for search bar and button */
+@media (max-width: 768px) {
+  #search-bar {
+    width: 60%; /* Reduce width for tablets */
+  }
+
+  #search-btn {
+    padding: 10px 15px; /* Smaller padding for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  #search-bar {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 10px; /* Add space between search bar and button */
+  }
+
+  #search-btn {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Base styles for pagination buttons */
+.pagination-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e01f1f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 5px; /* Space between buttons */
+}
+
+.pagination-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments for pagination buttons */
+@media (max-width: 480px) {
+  .pagination-btn {
+    padding: 8px 15px; /* Smaller padding for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
