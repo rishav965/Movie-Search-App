@@ -73,3 +73,19 @@ const handlePagination = (page) => {
     }
   };
 };
+
+
+document.getElementById('search-btn').addEventListener('click', function() {
+  const moviesContainer = document.getElementById('movies');
+  moviesContainer.style.animation = 'slideUp 1s ease-in-out';
+});
+
+document.getElementById('search-btn').addEventListener('click', function() {
+  const searchBtn = document.getElementById('search-btn');
+  searchBtn.classList.add('animate-big');
+
+  // Remove the class after the animation ends
+  setTimeout(() => {
+    searchBtn.classList.remove('animate-big');
+  }, 300); // Match the duration of the CSS transition
+});
